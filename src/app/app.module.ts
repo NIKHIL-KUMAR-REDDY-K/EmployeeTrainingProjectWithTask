@@ -20,6 +20,8 @@ import { TrainerComponent } from './trainer/trainer.component';
 import { AddTrainerComponent } from './Trainer/add-trainer/add-trainer.component';
 import { DisplayTrainerComponent } from './Trainer/display-trainer/display-trainer.component';
 import { UpdateTrainerComponent } from './Trainer/update-trainer/update-trainer.component';
+import {TaskModule} from './task/task.module';
+import { TaskService } from './shared/task.service';
 
 @NgModule({
   declarations: [
@@ -44,13 +46,14 @@ import { UpdateTrainerComponent } from './Trainer/update-trainer/update-trainer.
     ToastrModule.forRoot({
       progressBar: true
     }),
-    FormsModule
+    FormsModule,
+    TaskModule
   ],
   providers: [UserService,{
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptor,
     multi: true
-  }],
+  },TaskService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
