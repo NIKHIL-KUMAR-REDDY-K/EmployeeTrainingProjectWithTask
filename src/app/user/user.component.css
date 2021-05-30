@@ -46,7 +46,7 @@ div.form-group.required>label:first-child:after{
     justify-content: center;
     width: 100%;
     padding: 100px;
-    background: url(C:\Users\HP\Pictures\TheWall\try1.jpg)  no-repeat center center fixed;
+    /* background: url(C:\Users\HP\Pictures\TheWall\try1.jpg)  no-repeat center center fixed; */
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
