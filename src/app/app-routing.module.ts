@@ -16,6 +16,8 @@ import { DisplayAllTaskComponent } from './task/display-all-task/display-all-tas
 import { AcceptTaskDetailsComponent } from './task/accept-task-details/accept-task-details.component';
 import { UpdateTaskDetailsComponent } from './task/update-task-details/update-task-details.component';
 import { DeleteTaskDetailsComponent } from './task/delete-task-details/delete-task-details.component';
+import { AcceptInputToUpdateComponent } from './tracker/accept-input-to-update/accept-input-to-update.component';
+import { UpdateFormTrackerComponent } from './tracker/update-form-tracker/update-form-tracker.component';
 
 
 const routes: Routes = [
@@ -44,7 +46,9 @@ const routes: Routes = [
 {path:'AcceptTaskDetails',component:AcceptTaskDetailsComponent},
 {path:'UpdateTaskDetails',component:UpdateTaskDetailsComponent},
 {path:'UpdateTaskDetails/:id',component:UpdateTaskDetailsComponent},
-{path:'DeleteTaskDetails',component:DeleteTaskDetailsComponent}
+{path:'DeleteTaskDetails',component:DeleteTaskDetailsComponent},
+{path:'AcceptInputsToUpdateTracker',component:AcceptInputToUpdateComponent},
+{path:'UpdateTrackerStatus/:taskId/:userName',component:UpdateFormTrackerComponent}
 
 ];
 

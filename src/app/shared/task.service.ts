@@ -30,10 +30,7 @@ export class TaskService {
 
   }
   
-  DeleteTaskWithID(TaskId:any){
-    // console.warn(TaskName);
-     //`${this.CustomerProductsUrl}/${data}`
-     
+  DeleteTaskWithID(TaskId:any){  
      return this.http.delete(`${this.TaskUrl}/${TaskId}`);
    }
 }

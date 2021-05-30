@@ -22,6 +22,8 @@ import { DisplayTrainerComponent } from './Trainer/display-trainer/display-train
 import { UpdateTrainerComponent } from './Trainer/update-trainer/update-trainer.component';
 import {TaskModule} from './task/task.module';
 import { TaskService } from './shared/task.service';
+import {TrackerModule} from './tracker/tracker.module';
+import { TrackerService } from './shared/tracker.service';
 
 @NgModule({
   declarations: [
@@ -43,13 +45,14 @@ import { TaskService } from './shared/task.service';
     ReactiveFormsModule,
     HttpClientModule,
     TaskModule,
+    TrackerModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       progressBar: true
     }),
     FormsModule
   ],
-  providers: [TaskService,UserService,{
+  providers: [TaskService,UserService,TrackerService,{
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptor,
     multi: true
