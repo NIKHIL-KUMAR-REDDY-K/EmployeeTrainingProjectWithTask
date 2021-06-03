@@ -24,6 +24,9 @@ import {TaskModule} from './task/task.module';
 import { TaskService } from './shared/task.service';
 import {TrackerModule} from './tracker/tracker.module';
 import { TrackerService } from './shared/tracker.service';
+import { MyDetailsComponent } from './trainer/my-details/my-details.component';
+import { DisplayDetailsBasedOnTrackComponent } from './trainer/display-details-based-on-track/display-details-based-on-track.component';
+import { AcceptInputToGetListOfStudentsComponent } from './trainer/accept-input-to-get-list-of-students/accept-input-to-get-list-of-students.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import { TrackerService } from './shared/tracker.service';
     TrainerComponent,
     AddTrainerComponent,
     DisplayTrainerComponent,
-    UpdateTrainerComponent
+    UpdateTrainerComponent,
+    MyDetailsComponent,
+    DisplayDetailsBasedOnTrackComponent,
+    AcceptInputToGetListOfStudentsComponent
   ],
   imports: [  
     BrowserModule,
@@ -52,6 +58,7 @@ import { TrackerService } from './shared/tracker.service';
     }),
     FormsModule
   ],
+  exports:[HomeComponent],
   providers: [TaskService,UserService,TrackerService,{
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptor,

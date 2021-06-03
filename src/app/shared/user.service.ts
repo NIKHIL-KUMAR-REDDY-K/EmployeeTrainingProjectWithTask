@@ -108,5 +108,9 @@ export class UserService {
     return this.http.put('https://localhost:44304/api/AspNetUsers',data);
   }
 
+  getTrackTrainersDetails(trackName:any)
+ {
+  return this.http.get('https://localhost:44304/api/AspNetUsers/GetTrack/'+trackName); 
+ }
 
 }

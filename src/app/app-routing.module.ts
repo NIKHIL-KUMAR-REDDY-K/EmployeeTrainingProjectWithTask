@@ -18,6 +18,9 @@ import { UpdateTaskDetailsComponent } from './task/update-task-details/update-ta
 import { DeleteTaskDetailsComponent } from './task/delete-task-details/delete-task-details.component';
 import { AcceptInputToUpdateComponent } from './tracker/accept-input-to-update/accept-input-to-update.component';
 import { UpdateFormTrackerComponent } from './tracker/update-form-tracker/update-form-tracker.component';
+import { MyDetailsComponent } from './trainer/my-details/my-details.component';
+import { AcceptInputToGetListOfStudentsComponent } from './trainer/accept-input-to-get-list-of-students/accept-input-to-get-list-of-students.component';
+import { DisplayDetailsBasedOnTrackComponent } from './trainer/display-details-based-on-track/display-details-based-on-track.component';
 
 
 const routes: Routes = [
@@ -40,6 +43,9 @@ const routes: Routes = [
 {path:'Trainer',component:TrainerComponent},
 {path:'update',component:UpdateTrainerComponent},
 {path:'update/:id',component:UpdateTrainerComponent},
+{path:'MyDetails/:userName',component:MyDetailsComponent},
+{path:'AcceptInputToGetEmployees',component:AcceptInputToGetListOfStudentsComponent},
+{path:'DisplayAllDetailsBaseOnTrace/:name',component:DisplayDetailsBasedOnTrackComponent},
 
 
 {path:'DisplayTask',component:DisplayAllTaskComponent},
